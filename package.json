@@ -1,0 +1,17 @@
+{
+  "name": "ythp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "miniget": "^2.0.1",
+    "node-html-parser": "^1.2.20",
+    "ytpl": "^1.0.0"
+  }
+}
