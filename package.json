@@ -1,13 +1,15 @@
 {
-  "name": "ythp",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@b1ank3/ythp",
+  "productName": "ythp",
+  "version": "1.0.1",
+  "description": "Youtube Home Page videos without API key",
   "main": "lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": {},
+  "keywords": ["youtube", "Home page"],
+  "author": {
+    "name": "B1ANK3",
+    "email": "44206247+B1ANK3@users.noreply.github.com"
   },
-  "keywords": [],
-  "author": "",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.20.0",
