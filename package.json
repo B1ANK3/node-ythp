@@ -2,16 +2,19 @@
   "name": "ythp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "miniget": "^2.0.1",
-    "node-html-parser": "^1.2.20",
-    "ytpl": "^1.0.0"
+    "axios": "^0.20.0",
+    "jsdom-little": "^0.10.6",
+    "node-html-parser": "^1.2.20"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.2"
   }
 }
