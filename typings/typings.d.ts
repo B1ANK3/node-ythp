@@ -1,34 +1,33 @@
 declare module 'ythp' {
-    namespace ythp {
-        interface videoYTHP {
-            recommended: VideoItem[]
-            ads: VideoItem[]
-            misc: VideoItem[]
-        }
-
-        interface VideoItem {
-            id: string
-            title: string
-            description: string
-            duration: string
-            view_count: string
-            short_view_count_text: string
-            isLive: boolean
-            thumbnails: {
+    interface videoYTHP {
+        recommended: VideoItem[]
+        ads: VideoItem[]
+        misc: VideoItem[]
+    }
+    interface VideoItem {
+        id: string
+        title: string
+        description: string
+        duration: string
+        view_count: string
+        short_view_count_text: string
+        isLive: boolean
+        thumbnails: {
+            height: number
+            url: string
+            width: number
+        }[]
+        author: {
+            name: string
+            channel_url: string
+            avatar: {
                 height: number
                 url: string
                 width: number
             }[]
-            author: {
-                name: string
-                channel_url: string
-                avatar: {
-                    height: number
-                    url: string
-                    width: number
-                }[]
-            }
         }
+    }
+    namespace ythp {
 
         interface commandMetadata {
             webCommandMetadata: {
@@ -39,7 +38,7 @@ declare module 'ythp' {
                 apiUrl?: string
             }
         }
-        
+
         interface navigationEndpoint {
             clickTrackingParams: string
             commandMetadata: commandMetadata
@@ -78,11 +77,11 @@ declare module 'ythp' {
                 }[]
             }
         }
-        
+
         interface loggingUrls {
             baseUrl: string
         }
-        
+
         interface viewableCommands {
             clickTrackingParams: string
             loggingUrls: loggingUrls[]
@@ -90,7 +89,7 @@ declare module 'ythp' {
                 hack: boolean
             }
         }
-        
+
         interface signalServiceEndpoint {
             signal: string
             actions: {
@@ -111,7 +110,7 @@ declare module 'ythp' {
                 }
             }[]
         }
-        
+
         interface menu {
             menuRenderer: {
                 items:
@@ -142,7 +141,7 @@ declare module 'ythp' {
                 targetId: string
             }
         }
-        
+
         interface thumbnail {
             thumbnails: {
                 url: string
@@ -151,13 +150,13 @@ declare module 'ythp' {
             }[]
             accessibility?: accessibility
         }
-        
+
         interface thumbnailOverlays {
             thumbnailOverlayTimeStatusRenderer: thumbnailOverlayTimeStatusRenderer[]
             thumbnailOverlayToggleButtonRenderer: thumbnailOverlayToggleButtonRenderer[]
             thumbnailOverlayNowPlayingRenderer: thumbnailOverlayNowPlayingRenderer[]
         }
-        
+
         interface thumbnailOverlayTimeStatusRenderer {
             text: {
                 accessibility: {
@@ -169,7 +168,7 @@ declare module 'ythp' {
             },
             style: string
         }
-        
+
         interface playlistEditEndpoint {
             playlistId: string
             actions: {
@@ -177,23 +176,23 @@ declare module 'ythp' {
                 action: string
             }[]
         }
-        
+
         interface toggledAccessibility {
             accessibilityData: {
                 label: string
             }
         }
-        
+
         interface toggledServiceEndpoint {
             clickTrackingParams: string
             commandMetadata: commandMetadata
             playlistEditEndpoint: playlistEditEndpoint
         }
-        
+
         interface toggledIcon {
             iconType: string
         }
-        
+
         interface thumbnailOverlayToggleButtonRenderer {
             isToggled: boolean
             untoggledIcon: toggledIcon
@@ -206,7 +205,7 @@ declare module 'ythp' {
             toggledAccessibility: toggledAccessibility
             trackingParams: string
         }
-        
+
         interface thumbnailOverlayNowPlayingRenderer {
             text: {
                 runs: [
@@ -216,18 +215,18 @@ declare module 'ythp' {
                 ]
             }
         }
-        
+
         interface runs {
             text: string
             navigationEndpoint?: navigationEndpoint
         }
-        
+
         interface accessibility {
             accessibilityData: {
                 label: string
             }
         }
-        
+
         interface buttonRenderer {
             style: string | { styleType: string }
             size: string
@@ -265,12 +264,12 @@ declare module 'ythp' {
                 }
             }
         }
-        
+
         interface multiPageMenuSectionRenderer {
             items: compactLinkRenderer[]
             trackingParams: string
         }
-        
+
         interface compactLinkRenderer {
             icon: toggledIcon
             title: {
@@ -279,7 +278,7 @@ declare module 'ythp' {
             navigationEndpoint: navigationEndpoint
             trackingParams: string
         }
-        
+
         interface topbarMenuButtonRenderer {
             icon: toggledIcon
             menuRenderer?: {
@@ -315,7 +314,7 @@ declare module 'ythp' {
             style: string
             targetId: string
         }
-        
+
         interface hotkeyDialogSectionOptionRenderer {
             label: {
                 runs: runs[]
@@ -323,14 +322,14 @@ declare module 'ythp' {
             hotkey: string
             hotkeyAccessibilityLabel?: accessibility
         }
-        
+
         interface hotkeyDialogSectionRenderer {
             title: {
                 runs: runs[]
             },
             options: hotkeyDialogSectionOptionRenderer[]
         }
-        
+
         interface contentsrichSectionRenderer {
             richSectionRenderer: {
                 content: {
@@ -368,7 +367,7 @@ declare module 'ythp' {
                 trackingParams: string
             }
         }
-        
+
         interface contentsrichItemRenderer {
             richItemRenderer: {
                 content: {
@@ -445,7 +444,7 @@ declare module 'ythp' {
                 trackingParams: string
             }
         }
-        
+
         interface contentscontinuationItemRenderer {
             continuationItemRenderer: {
                 trigger: string
@@ -459,12 +458,12 @@ declare module 'ythp' {
                 }
             }
         }
-        
+
         interface reportingPing {
             pingType: string
             url: string
         }
-        
+
         interface badges {
             metadataBadgeRenderer: {
                 style: string
@@ -472,7 +471,7 @@ declare module 'ythp' {
                 trackingParams: string
             }
         }
-        
+
         interface masthead {
             videoMastheadAdV3Renderer: {
                 trackingParams: string
@@ -537,7 +536,7 @@ declare module 'ythp' {
                 }
             }
         }
-        
+
         interface logo {
             topbarLogoRenderer: {
                 iconImage: toggledIcon
@@ -548,7 +547,7 @@ declare module 'ythp' {
                 trackingParams: string
             }
         }
-        
+
         interface searchbox {
             fusionSearchboxRenderer: {
                 icon: toggledIcon
@@ -567,7 +566,7 @@ declare module 'ythp' {
                 searchEndpoint: navigationEndpoint
             }
         }
-        
+
         interface windowInitial {
             responseContext: {
                 serviceTrackingParams: {
